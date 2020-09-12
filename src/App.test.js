@@ -21,4 +21,10 @@ describe('App Component', () => {
     expect(wrapper.length).toBe(1)
   })
 
+  test('should render the header container without errors', () => {
+     const wrapper = findByTestAttr(component, 'App-header-container')
+     expect(wrapper.length).toBe(1)
+  })
+  
+
 })
