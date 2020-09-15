@@ -1,9 +1,11 @@
 import React from "react";
 
 const Header = (props) => {
-    return(
+    return (
         <header>
-            
+            <div className="wrap">
+                <h1>COVID 19</h1>
+            </div>
         </header>
     );
 };
