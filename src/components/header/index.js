@@ -1,9 +1,11 @@
 import React from "react";
 
 const Header = (props) => {
-    return(
+    return (
         <header>
-            
+            <div className="wrap">
+                
+            </div>
         </header>
     );
 };
