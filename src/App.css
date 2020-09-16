@@ -1,8 +1,8 @@
-*{
+* {
   margin: 0;
 }
 
-.App-header {
+.app__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
