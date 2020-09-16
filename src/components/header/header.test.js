@@ -1,5 +1,5 @@
 import React from "react";
-import Header from './index';
+import Header from "./index";
 import { shallow } from "enzyme";
 import { findByTestAttr } from "./../../utils";
 
@@ -28,4 +28,4 @@ describe("Header Component", () => {
         const wrapper = findByTestAttr(component, "menuitem");
         expect(wrapper.length).toBe(1);
       });
-})
+});
