@@ -49,7 +49,7 @@ describe("InfoBox component", () => {
     });
   });
 
-  describe("Have No props",()=>{
+  describe("Have No props", () => {
     let component;
     beforeEach(() => {
       component = setUp();
@@ -62,16 +62,16 @@ describe("InfoBox component", () => {
 
   });
 
-  describe("Checking PropTypes",()=>{
+  describe("Checking PropTypes", () => {
 
-    test("Should not throw any warning",()=>{
+    test("Should not throw any warning", () => {
       const expectedProps = {
         title: "title",
         cases: 23,
         total: 34
       };
 
-      const propsError = checkProps(InfoBox,expectedProps);
+      const propsError = checkProps(InfoBox, expectedProps);
       expect(propsError).toBeUndefined();
     });
   });
