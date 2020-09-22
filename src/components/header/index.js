@@ -1,32 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FormControl, Select, MenuItem } from "@material-ui/core";
 
-const Header = () => {
-    const [countries, setCountries] = useState([]);
-    const [country,setCountry] = useState("worldwide");
-    useEffect(() => {
-        const getCountriesData = async () => {
-            await fetch("https://disease.sh/v3/covid-19/countries")
-                .then((response) => response.json())
-                .then((data) => {
-                    const countries = data.map((country) => (
-                        {
-                            name: country.country,
-                            value: country.countryInfo.iso2
-                        }
-                    ));
-
-                    setCountries(countries);
-                });
-        };
-        getCountriesData();
-    }, []);
-
-    const onCountryChange = async (event) => {
-        const countryCode = event.target.value;
-        setCountry(countryCode);
-    };
-
+const Header = ({ country, onCountryChange, countries }) => {
     return (
         <>
             <h1>COVID-19 TRACKER</h1>
