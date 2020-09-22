@@ -3,7 +3,7 @@ import { Line } from "react-chartjs-2";
 import numeral from "numeral";
 
 
-function Graph({ casesType = "cases" }) {
+function Graph({ casesType = "cases", ...props }) {
     const [data, setData] = useState({});
 
     const options = {
@@ -30,7 +30,7 @@ function Graph({ casesType = "cases" }) {
                 {
                     type: "time",
                     time: {
-                        format: "MM/DD/YY",
+                        parser: "MM/DD/YY",
                         tooltipFormat: "ll",
                     },
                 },
@@ -82,7 +82,7 @@ function Graph({ casesType = "cases" }) {
 
 
     return (
-        <div>
+        <div className={props.className}>
             {data?.length > 0 && (
                 <Line options={options} data={{
                     datasets: [
