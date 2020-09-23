@@ -33,7 +33,7 @@ body {
   flex-direction: column;
 }
 
-.app__right  .MuiCardContent-root {
+.app__right .MuiCardContent-root {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -50,11 +50,9 @@ body {
 
 .app__graph {
   flex-grow: 1;
-
 }
- 
-@media (max-width: 990px){
+@media (max-width: 990px) {
   .App {
-      flex-direction: column;
+        flex-direction: column;
   }
 }
