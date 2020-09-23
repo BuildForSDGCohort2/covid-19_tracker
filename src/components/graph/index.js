@@ -20,7 +20,7 @@ function Graph({ casesType = "cases", ...props }) {
             mode: "index",
             intersect: false,
             callbacks: {
-                label: function (tooltipItem, data) {
+                label: (tooltipItem, data) => {
                     return numeral(tooltipItem.value).format("+0,0");
                 },
             },
@@ -42,7 +42,7 @@ function Graph({ casesType = "cases", ...props }) {
                     },
                     ticks: {
                         //include dollar sign in the ticks
-                        callback: function (value, index, values) {
+                        callback: (value, index, values) => {
                             return numeral(value).format("0a");
                         },
                     },
