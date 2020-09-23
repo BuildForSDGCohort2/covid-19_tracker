@@ -51,6 +51,7 @@ body {
 .app__graph {
   flex-grow: 1;
 }
+
 @media (max-width: 990px) {
   .App {
         flex-direction: column;

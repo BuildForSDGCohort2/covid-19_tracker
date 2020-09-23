@@ -23,10 +23,10 @@ function App() {
 
   useEffect(() => {
     fetch("https://disease.sh/v3/covid-19/all")
-      .then(response => response.json())
-      .then(data => {
+      .then(response => {response.json()})
+      .then((data) => {
         setCountryInfo(data);
-      })
+      });
   }, []);
   useEffect(() => {
     const getCountriesData = async () => {
@@ -73,9 +73,9 @@ function App() {
           <Header country={country} countries={countries} onCountryChange={onCountryChange} />
         </div>
         <div className="app_stats" data-test="app_stats_container">
-          <InfoBox isRed active={casesType === "cases"} onClick={e => setCasesType("cases")} title="Coronavirus cases" total={prettyPrintStat(countryInfo.cases)} cases={prettyPrintStat(countryInfo.todayCases)} />
-          <InfoBox active={casesType === "recovered"} onClick={e => setCasesType("recovered")} title="Recovered" total={prettyPrintStat(countryInfo.recovered)} cases={prettyPrintStat(countryInfo.todayRecovered)} />
-          <InfoBox isRed active={casesType === "deaths"} onClick={e => setCasesType("deaths")} title="Deaths" total={prettyPrintStat(countryInfo.deaths)} cases={prettyPrintStat(countryInfo.todayDeaths)} />
+          <InfoBox isRed active={casesType === "cases"} onClick={(e) => setCasesType("cases")} title="Coronavirus cases" total={prettyPrintStat(countryInfo.cases)} cases={prettyPrintStat(countryInfo.todayCases)} />
+          <InfoBox active={casesType === "recovered"} onClick={(e) => setCasesType("recovered")} title="Recovered" total={prettyPrintStat(countryInfo.recovered)} cases={prettyPrintStat(countryInfo.todayRecovered)} />
+          <InfoBox isRed active={casesType === "deaths"} onClick={(e) => setCasesType("deaths")} title="Deaths" total={prettyPrintStat(countryInfo.deaths)} cases={prettyPrintStat(countryInfo.todayDeaths)} />
         </div>
         <Map casesType={casesType} center={mapCenter} zoom={mapZoom} countries={mapCountries} />
       </div>
