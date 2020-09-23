@@ -1,38 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
 import { Card, CardContent, Typography } from "@material-ui/core";
 import PropTypes from "prop-types";
+import "./index.css";
 
-class InfoBox extends Component {
-  constructor(props) {
-    super(props);
+const InfoBox = ({ title, cases, total, ...props }) => {
+  if (!title && !cases && !total) {
+    return null;
   }
 
-  render() {
-
-    const { title, cases, total } = this.props;
-
-    if (!title && !cases && !total) {
-      return null;
-    }
-
-    return (
-      <>
-        <Card data-test="infoBoxcard">
-          <CardContent data-test="infoBox__cardcontent">
-            {/*Title*/}
-            <Typography color="textSecondary" className="infoBox__title" data-test="infoBox__title">{title}</Typography>
-            {/*Number of cases*/}
-            <h1 className="infoBox__cases" data-test="infoBox__cases">{cases}</h1>
-            {/*Total*/}
-            <Typography color="textSecondary" className="infoBox__total" data-test="infoBox__total">{total} Total</Typography>
-          </CardContent>
-        </Card>
-      </>
-    );
-
-  }
-
-};
+  return (
+    <>
+      <Card onClick={props.onClick} data-test="infoBoxcard" className={`infoBox ${props.active && "infoBox--selected"} ${props.isRed && "infoBox--red"}`}>
+        <CardContent data-test="infoBox__cardcontent">
+          <Typography color="textSecondary" className="infoBox__title" data-test="infoBox__title">{title}</Typography>
+          <h2 className={`infoBox__cases ${!props.isRed && "infoBox__cases--green"}`} data-test="infoBox__cases">{cases}</h2>
+          <Typography color="textSecondary" className="infoBox__total" data-test="infoBox__total">{total} Total</Typography>
+        </CardContent>
+      </Card>
+    </>
+  );
+}
 
 InfoBox.propTypes = {
   title: PropTypes.string,
