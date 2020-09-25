@@ -23,8 +23,8 @@ const InfoBox = ({ title, cases, total, ...props }) => {
 
 InfoBox.propTypes = {
   title: PropTypes.string,
-  cases: PropTypes.number,
-  total: PropTypes.number
+  cases: PropTypes.string,
+  total: PropTypes.string
 };
 
 export default InfoBox;
