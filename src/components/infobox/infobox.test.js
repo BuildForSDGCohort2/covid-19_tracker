@@ -17,8 +17,8 @@ describe("InfoBox component", () => {
     beforeEach(() => {
       const expectedProps = {
         title: "title",
-        cases: 23,
-        total: 34
+        cases: "23",
+        total: "34"
       };
       component = setUp(expectedProps);
     });
@@ -67,10 +67,9 @@ describe("InfoBox component", () => {
     test("Should not throw any warning", () => {
       const expectedProps = {
         title: "title",
-        cases: 23,
-        total: 34
+        cases: "23",
+        total: "34"
       };
-
       const propsError = checkProps(InfoBox, expectedProps);
       expect(propsError).toBeUndefined();
     });
