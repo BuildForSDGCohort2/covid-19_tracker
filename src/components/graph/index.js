@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import numeral from "numeral";
+import PropTypes from "prop-types";
 
 
 function Graph({ casesType = "cases", ...props }) {
@@ -82,9 +83,9 @@ function Graph({ casesType = "cases", ...props }) {
 
 
     return (
-        <div className={props.className}>
+        <div className={props.className} data-test="main">
             {data?.length > 0 && (
-                <Line options={options} data={{
+                <Line data-test="main__line" options={options} data={{
                     datasets: [
                         {
                             backgroundColor: "rgba(204,16,520,0.2)",
@@ -96,6 +97,10 @@ function Graph({ casesType = "cases", ...props }) {
             )}
         </div>
     )
+};
+
+Graph.propType = {
+    casesType: PropTypes.string
 };
 
 export default Graph;
