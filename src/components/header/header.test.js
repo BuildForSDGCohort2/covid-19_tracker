@@ -49,7 +49,7 @@ describe("Header Component", () => {
         value: "country iso"
       }],
       onCountryChange: () => { }
-    }
+    };
 
 
     test("should not throw any warnings", () => {
