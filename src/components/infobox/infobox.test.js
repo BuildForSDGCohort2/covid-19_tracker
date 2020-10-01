@@ -70,7 +70,6 @@ describe("InfoBox component", () => {
         cases: "23",
         total: "34"
       };
-
       const propsError = checkProps(InfoBox, expectedProps);
       expect(propsError).toBeUndefined();
     });
