@@ -15,7 +15,7 @@ function Map({ center, zoom, countries, casesType }) {
             </LeafletMap>
         </div>
     )
-};
+}
 
 
 Map.propTypes = {
