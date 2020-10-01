@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 function Table({ countries }) {
     return (
-        <div className="table">
+        <div className="table" data-test="table">
             {countries.map(({ country, cases }) => (
                 <tr key={country}>
                     <td>{country}</td>
@@ -14,6 +14,10 @@ function Table({ countries }) {
             ))}
         </div>
     )
+};
+
+Table.propTypes = {
+    countries: PropTypes.array
 };
 
 export default Table;
