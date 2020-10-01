@@ -18,7 +18,7 @@ describe("Table Component", () => {
             component = setUp(expectedProps);
         });
 
-        test('should render table without errors', () => {
+        test("should render table without errors", () => {
             const wrapper = findByTestAttr(component, "table");
             expect(wrapper.length).toBe(1);
         });

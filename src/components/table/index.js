@@ -14,7 +14,7 @@ function Table({ countries }) {
             ))}
         </div>
     )
-};
+}
 
 Table.propTypes = {
     countries: PropTypes.array

@@ -18,7 +18,7 @@ describe("Graph Component", () => {
             component = setUp(expectedProps);
         });
 
-        test('should render main element without errors', () => {
+        test("should render main element without errors", () => {
             const wrapper = findByTestAttr(component, "main");
             expect(wrapper.length).toBe(1);
         });
