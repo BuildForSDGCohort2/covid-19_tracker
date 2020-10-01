@@ -20,7 +20,7 @@ describe("Header Component", () => {
           value: "country iso"
         }],
         onCountryChange: () => { }
-      }
+      };
       component = setUp(expectedProps);
     });
 
