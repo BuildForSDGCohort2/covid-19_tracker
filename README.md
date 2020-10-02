@@ -178,4 +178,3 @@ Project Link: [https://github.com/BuildForSDGCohort2/covid-19_tracker](https://g
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/oburusule-dustan-246187111/
 [product-screenshot]: images/webapp.png
-
